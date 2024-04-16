@@ -1,0 +1,16 @@
+extends ../main
+
+block content
+  h1= pageTitle
+
+  // Display all animals
+  each animal in animals
+    .animal
+      h2= animal.name
+      p= "Scientific Name: " + animal.scientificName
+      p= "Common Name: " + animal.commonName
+      p= "Given Name: " + animal.givenName
+      p= "Gender: " + animal.gender
+      p= "Date of Birth: " + animal.dob
+      p= "Age: " + animal.age
+      p= "Transportable: " + animal.isTransportable

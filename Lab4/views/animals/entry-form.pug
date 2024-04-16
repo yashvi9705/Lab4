@@ -1,0 +1,44 @@
+extends ../main
+
+block content 
+    if errorMessage
+        .alert.alert-danger=errorMessage
+
+    form.border.p-4(method='post', action='/entry-form')
+        label.form-label(for="zoo") Home Zoo:
+        input.form-control(type="text", name="zoo", id="zoo")
+        br
+        label.form-label(for="ScientificName") Scientific Name: 
+        input.form-control(type="text", name="ScientificName", id="ScientificName")
+        br
+        label.form-label(for="CommonName") Common Name:
+        input.form-control(type="text", name="CommonName", id="CommonName")
+        br
+        label.form-label(for="GivenName") Given Name:
+        input.form-control(type="text", name="GivenName", id="GivenName")
+        br
+        label.form-label(for="gender") Gender:
+        br
+        input.form-check-input(type="radio", name="flexRadioDefault", id="flexRadioDefault1", checked)
+        label.form-check-label(for="flexRadioDefault1") Male
+
+        input.form-check-input(type="radio", name="flexRadioDefault", id="flexRadioDefault2")
+        label.form-check-label(for="flexRadioDefault2") Female
+        br
+        label.form-label(for="DOB") date of birth:
+        input.form-control(type="date", name="DOB", id="DOB")
+        br
+        label.form-label(for="age") Age:
+        input.form-control(type="text", name="age", id="age")
+        br
+        label.form-label(for="gender") Is transportable:
+        br
+        input.form-check-input(type="radio", name="flexRadioDefault", id="flexRadioDefault1", checked)
+        label.form-check-label(for="flexRadioDefault1") Available
+
+        input.form-check-input(type="radio", name="flexRadioDefault", id="flexRadioDefault2")
+        label.form-check-label(for="flexRadioDefault2") UnAvailable
+        br
+        input.btn.btn-primary(type="submit", value="Add Animal to database")
+        input.btn.btn-primary(type="reset", value="Reset Form")
+
