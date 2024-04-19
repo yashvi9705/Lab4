@@ -1,0 +1,42 @@
+extends ../main
+
+block content 
+
+    form.border.p-4(method='post' )
+        label.form-label(for="zoo") Home Zoo:
+        input.form-control(type="text", name="Zoo", id="Zoo")
+        br
+        label.form-label(for="ScientificName") Scientific Name: 
+        input.form-control(type="text", name="ScientificName", id="ScientificName")
+        br
+        label.form-label(for="CommonName") Common Name:
+        input.form-control(type="text", name="CommonName", id="CommonName")
+        br
+        label.form-label(for="GivenName") Given Name:
+        input.form-control(type="text", name="GivenName", id="GivenName")
+        br
+        label.form-label(for="gender") Gender:
+        br
+        input.form-check-input(type="radio", name="Gender", id="male", checked)
+        label.form-check-label(for="flexRadioDefault1") Male
+
+        input.form-check-input(type="radio", name="Gender", id="female")
+        label.form-check-label(for="flexRadioDefault2") Female
+        br
+        label.form-label(for="DOB") date of birth:
+        input.form-control(type="date", name="DOB", id="DOB")
+        br
+        label.form-label(for="age") Age:
+        input.form-control(type="text", name="age", id="age")
+        br
+        label.form-label(for="gender") Is transportable:
+        br
+        input.form-check-input(type="radio", name="isTransportable", id="available", checked)
+        label.form-check-label(for="available") Available
+
+        input.form-check-input(type="radio", name="isTransportable", id="unavailable")
+        label.form-check-label(for="unavailable") UnAvailable
+        br
+        input.btn.btn-primary(type="submit", value="Update")
+        input.btn.btn-primary(type="reset", value="Delete")
+

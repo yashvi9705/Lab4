@@ -9,6 +9,7 @@ Date: April 19, 2024
 
 
 const express = require('express');
+const bodyParser = require('body-parser');
 const pug = require('pug');
 const animal = require('./routes/animal.router');
 require('dotenv').config();
@@ -17,6 +18,7 @@ require('dotenv').config();
 const app = express();
 // use port from env or default to 3000 if not set
 const PORT = process.env.PORT || 3000;
+
 
 app.use(express.urlencoded({extended: false}));
 

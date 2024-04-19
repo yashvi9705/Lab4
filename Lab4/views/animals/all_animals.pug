@@ -1,0 +1,31 @@
+extends ../main
+
+block content
+  
+    table.table.table-striped
+        tr
+            th ZOO
+            th Scientific Name 
+            th Common Name
+            th Given Name
+            th Gender
+            th Date Of Birth
+            th Age 
+            th Transportable
+            th Action
+        each animal in animals
+            tr
+                td=animal.Zoo   
+                td=animal.ScientificName   
+                td=animal.CommonName
+                td=animal.GivenName
+                td=animal.Gender
+                td=animal.DOB
+                td=animal.age 
+                td=animal.isTransportable
+                td
+                    a.nav-link(aria-current='page', href='/edit-animal') Edit
+
+
+
+                
